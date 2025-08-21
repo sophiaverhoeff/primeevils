@@ -1,26 +1,68 @@
-# Prime Evils
+## PrimeEvils Monorepo
 
-## Development:
-When adding an app as a part of a Django project, it's important to remember to add the app to the 
-`INSTALLED_APPS` list in the settings.py file. Otherwise, the app will not be recognized by Django.
+React + TypeScript frontend (Vite).
 
-### Running the project
-command: `python manage.py runserver`
+### Requirements
 
-### Creating a new template
-command: `python manage.py startapp <app_name>`
+- Node.js 18+ and npm
 
-### Including a new template in the project
-Use the Django template language to include the template. 
-`{% include '<app_name>/<template_name>.html' %}`
+### Project structure
 
-If the template is not found, and recent changes have been made to the `INSTALLED_APPS` list,
-restart the development server.
-
-### Linking CSS / JS files
-Use the Django template language to link the files.
 ```
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/<name>.css' %}">
-<script src="{% static 'js/<name>.js' %}"></script>
+primeevils/
+  frontend/                 # React + TS app (Vite)
+    index.html
+    package.json
+    tsconfig.json
+    vite.config.ts
+    src/
+      main.tsx
+      App.tsx
+      ...
 ```
+
+### Run the frontend (React + Vite)
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The dev server URL will be printed by Vite (usually `http://localhost:5173`).
+
+### Frontend assets: public vs src/assets
+
+- **public/**
+  - **Not bundled** by Vite; files are copied as-is to the server root.
+  - Reference with absolute URLs like `/logo.png`.
+  - Use for favicons, `robots.txt`, `manifest.json`, or large static files that don't need hashing.
+  - Example (in HTML):
+
+```html
+<img src="/logo.png" alt="Logo" />
+```
+
+- **src/assets/**
+  - **Processed** by Vite (hashing, optimization, tree-shaking when imported).
+  - Import into TS/TSX/CSS so Vite can manage them.
+  - Use for images that are part of the app UI.
+  - Example (in TSX):
+
+```ts
+import logoUrl from "./assets/logo.png";
+
+export function Header() {
+  return <img src={logoUrl} alt="Logo" />;
+}
+```
+
+- Example (in CSS):
+
+```css
+.hero {
+  background: url("./assets/hero.jpg") center/cover no-repeat;
+}
+```
+
+- **Recommendation**: keep root-static files (favicon, manifest, robots) in `public/`. Put UI images in `src/assets/` and import them.
