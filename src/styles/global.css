@@ -7,7 +7,8 @@
   --text: #1A1916;
   --muted: #7A776E;
   --accent: #a43bff;
-  --danger: #B91C1C;
+  --blue: #2965ff;
+  --danger: #ea531f;
   --border: rgba(26, 25, 22, 0.12);
   --max: 720px;
 }
@@ -217,7 +218,7 @@ section { padding: 80px 0; }
 }
 .fear-list li:first-child { border-top: 0.5px solid var(--border); }
 .fear-arrow {
-  color: var(--danger);
+  color: var(--blue);
   font-weight: 500;
   flex-shrink: 0;
   margin-top: 1px;
@@ -233,7 +234,7 @@ section { padding: 80px 0; }
 }
 
 .origin-quote {
-  border-left: 2px solid var(--danger);
+  border-left: 2px solid var(--blue);
   padding-left: 20px;
   margin-bottom: 24px;
   font-size: 17px;
@@ -345,7 +346,7 @@ section { padding: 80px 0; }
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
   font-weight: 500;
-  color: var(--danger);
+  color: var(--blue);
 }
 .principle-title {
   font-size: 15px;
