@@ -186,7 +186,6 @@ section { padding: 80px 0; }
   background: var(--surface);
   padding: 16px 20px;
   color: var(--text);
-  white-space: pre-wrap;
 }
 .demo-notation .accent { color: var(--accent); }
 .demo-notation.active { display: block; }
