@@ -1,218 +1,347 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prime Evils — Chase what scares you</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Evils — Chase what scares you</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="nav">
+      <div class="nav-inner">
+        <a href="#" class="logo">
+          <span class="logo-sigma">∑</span>
+          <span class="logo-text">prime evils</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#units">Units</a></li>
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#connect">Connect</a></li>
+        </ul>
+      </div>
+    </nav>
 
-  <!-- NAV -->
-  <nav id="nav">
-    <div class="nav-inner">
-      <a href="#" class="logo">
-        <span class="logo-sigma">∑</span>
-        <span class="logo-text">prime evils</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#units">Units</a></li>
-        <li><a href="#philosophy">Philosophy</a></li>
-        <li><a href="#connect">Connect</a></li>
-      </ul>
-    </div>
-  </nav>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-headline">
+          Chase what <span class="accent">scares</span> you.
+        </h1>
+        <p class="hero-sub">
+          I have one rule in life: if something scares me, I walk toward it. At
+          26, with zero mathematical background, I walked toward the scariest
+          subject I knew. It changed everything about how I think. This is where
+          I teach the ideas that used to terrify me.
+        </p>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h1 class="hero-headline">Chase what <span class="accent">scares</span> you.</h1>
-      <p class="hero-sub">I have one rule in life: if something frightens me, I walk toward it. At 26, with zero mathematical background, I walked toward the scariest subject I knew. It changed everything about how I think. This is where I teach the ideas that used to terrify me.</p>
-
-      <div class="demo-card">
-        <div class="demo-header">
-          <span class="demo-label">Live demo — proof by induction</span>
-          <div class="toggle-wrap">
-            <span class="toggle-label" id="toggle-lbl">Show notation</span>
-            <label class="toggle" aria-label="Toggle notation">
-              <input type="checkbox" id="notation-toggle" />
-              <span class="toggle-track"></span>
-              <span class="toggle-thumb"></span>
-            </label>
+        <div class="demo-card">
+          <div class="demo-header">
+            <span class="demo-label">Live demo — proof by induction</span>
+            <div class="toggle-wrap">
+              <span class="toggle-label" id="toggle-lbl">Show notation</span>
+              <label class="toggle" aria-label="Toggle notation">
+                <input type="checkbox" id="notation-toggle" />
+                <span class="toggle-track"></span>
+                <span class="toggle-thumb"></span>
+              </label>
+            </div>
+          </div>
+          <p class="demo-plain" id="demo-plain">
+            Assume your statement is true for some case k. Then prove it must be
+            true for case k + 1. If you can do this, the chain reaction is
+            guaranteed — every case falls like a domino.
+          </p>
+          <div class="demo-notation" id="demo-notation">
+            Assume <span class="accent">P(k)</span> holds for some arbitrary k ≥ 1.
+            Show <span class="accent">P(k)</span> ⟹ <span class="accent"
+              >P(k+1)</span
+            >. By the principle of mathematical induction,
+            <span class="accent">P(n)</span> holds for all n ∈ ℕ. □
           </div>
         </div>
-        <p class="demo-plain" id="demo-plain">Assume your statement is true for some case k. Then prove it must be true for case k + 1. If you can do this, the chain reaction is guaranteed — every case falls like a domino.</p>
-        <div class="demo-notation" id="demo-notation">Assume <span class="accent">P(k)</span> holds for some arbitrary k ≥ 1.
-Show <span class="accent">P(k)</span> ⟹ <span class="accent">P(k+1)</span>.
-By the principle of mathematical induction,
-<span class="accent">P(n)</span> holds for all n ∈ ℕ. □</div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PHILOSOPHY -->
-  <section class="philosophy fade-up" id="philosophy">
-    <div class="container">
-      <h2 class="section-headline">The things that scare us most are usually the ones <span class="accent">most worth understanding.</span></h2>
+    <!-- PHILOSOPHY -->
+    <section class="philosophy fade-up" id="philosophy">
+      <div class="container">
+        <h2 class="section-headline">
+          The things that scare us most are usually the ones <span
+            class="accent">most worth understanding.</span
+          >
+        </h2>
 
-      <ul class="fear-list">
-        <li>
-          <span class="fear-arrow">→</span>
-          <span><span class="fear-main">Mathematical notation</span> <span class="fear-muted">looks like a secret language designed to exclude you</span></span>
-        </li>
-        <li>
-          <span class="fear-arrow">→</span>
-          <span><span class="fear-main">Proofs feel like rituals for people who were born knowing something you weren't</span> <span class="fear-muted">— they weren't</span></span>
-        </li>
-        <li>
-          <span class="fear-arrow">→</span>
-          <span><span class="fear-main">Abstraction feels unreachable</span> <span class="fear-muted">until the moment it doesn't, and then you can't imagine thinking any other way</span></span>
-        </li>
-        <li>
-          <span class="fear-arrow">→</span>
-          <span><span class="fear-main">The feeling that this kind of thinking isn't for you</span> <span class="fear-muted">is the most common and most wrong belief in education</span></span>
-        </li>
-      </ul>
+        <ul class="fear-list">
+          <li>
+            <span class="fear-arrow">→</span>
+            <span
+              ><span class="fear-main">Mathematical notation</span>
+              <span class="fear-muted"
+                >looks like a secret language designed to exclude you</span
+              ></span
+            >
+          </li>
+          <li>
+            <span class="fear-arrow">→</span>
+            <span
+              ><span class="fear-main"
+                >Proofs feel like rituals for people who were born knowing
+                something you weren't</span
+              >
+              <span class="fear-muted">— they weren't</span></span
+            >
+          </li>
+          <li>
+            <span class="fear-arrow">→</span>
+            <span
+              ><span class="fear-main">Abstraction feels unreachable</span>
+              <span class="fear-muted"
+                >until the moment it doesn't, and then you can't imagine
+                thinking any other way</span
+              ></span
+            >
+          </li>
+          <li>
+            <span class="fear-arrow">→</span>
+            <span
+              ><span class="fear-main"
+                >The feeling that this kind of thinking isn't for you</span
+              >
+              <span class="fear-muted"
+                >is the most common and most wrong belief in education</span
+              ></span
+            >
+          </li>
+        </ul>
 
-      <p class="philosophy-body">Prime Evils is built on a single conviction: the scariest ideas are the ones most worth chasing. Not despite the fear — because of it. The fear is a signal that something important is on the other side. Every unit here is a thing that frightened me. Every explanation is the one I wish I'd had. Every interactive is designed to make the terrifying feel inevitable.</p>
+        <p class="philosophy-body">
+          Prime Evils is built on a single conviction: the scariest ideas are
+          the ones most worth chasing. Not despite the fear — because of it. The
+          fear is a signal that something important is on the other side. Every
+          unit here is a thing that frightened me. Every explanation is the one
+          I wish I'd had. Every interactive is designed to make the terrifying
+          feel inevitable.
+        </p>
 
-      <blockquote class="origin-quote">"I bought five different books. Watched hundreds of videos. I just… didn't get it. The moment I finally did was one of the best feelings of my life."</blockquote>
+        <blockquote class="origin-quote">
+          "I bought five different books. Watched hundreds of videos. I just…
+          didn't get it. The moment I finally did was one of the best feelings
+          of my life."
+        </blockquote>
 
-      <p class="origin-body">That moment was proof by induction. I was 26 and had enrolled in a university mathematics degree with no prior knowledge — not because I thought I could do it, but because it scared me deeply and I had a rule about that. What I discovered was not that I was talented. It was that every explanation I'd encountered was designed for people who already half-knew the material. The notation was never explained. The intuition was always skipped. The fear was never acknowledged. Prime Evils exists to fix that — for anyone who has the same rule I do.</p>
-    </div>
-  </section>
+        <p class="origin-body">
+          That moment was proof by induction. I was 26 and had enrolled in a
+          university mathematics degree with no prior knowledge — not because I
+          thought I could do it, but because it scared me deeply and I had a
+          rule about that. What I discovered was not that I was talented. It was
+          that every explanation I'd encountered was designed for people who
+          already half-knew the material. The notation was never explained. The
+          intuition was always skipped. The fear was never acknowledged. Prime
+          Evils exists to fix that — for anyone who has the same rule I do.
+        </p>
+      </div>
+    </section>
 
-  <!-- UNITS -->
-  <section class="units fade-up" id="units">
-    <div class="container">
-      <h2 class="units-headline">Units</h2>
-      <div class="units-grid">
-        <div class="unit-card">
-          <span class="unit-tag">01 — Logic</span>
-          <h3 class="unit-title">Proof by induction</h3>
-          <p class="unit-body">How to prove something is true for infinitely many cases using exactly two sentences. The idea that took me five books and finally clicked in ten minutes.</p>
-          <div class="unit-footer"><span class="unit-dot"></span>Interactive · Notation toggle</div>
+    <!-- UNITS -->
+    <section class="units fade-up" id="units">
+      <div class="container">
+        <h2 class="units-headline">Units</h2>
+        <div class="units-grid">
+          <div class="unit-card">
+            <span class="unit-tag">01 — Logic</span>
+            <h3 class="unit-title">Proof by induction</h3>
+            <p class="unit-body">
+              How to prove something is true for infinitely many cases using
+              exactly two sentences. The idea that took me five books and
+              finally clicked in ten minutes.
+            </p>
+            <div class="unit-footer">
+              <span class="unit-dot"></span>Interactive · Notation toggle
+            </div>
+          </div>
+          <div class="unit-card">
+            <span class="unit-tag">02 — Computer science</span>
+            <h3 class="unit-title">Binary trees always have n+1 leaves</h3>
+            <p class="unit-body">
+              A fact that looks like a coincidence, proved by induction. Every
+              tree-based algorithm in CS quietly relies on this relationship.
+            </p>
+            <div class="unit-footer">
+              <span class="unit-dot"></span>Interactive · Notation toggle
+            </div>
+          </div>
+          <div class="unit-card dimmed">
+            <span class="unit-tag">03 — Calculus</span>
+            <h3 class="unit-title">The derivative at an instant</h3>
+            <p class="unit-body">
+              Speed at a single moment in time. How 0 ÷ 0 becomes the most
+              useful thing in mathematics.
+            </p>
+            <div class="unit-footer">Coming soon</div>
+          </div>
+          <div class="unit-card dimmed">
+            <span class="unit-tag">04 — Number theory</span>
+            <h3 class="unit-title">Why there are infinitely many primes</h3>
+            <p class="unit-body">
+              Euclid's proof — 2,300 years old and still one of the most
+              beautiful arguments in all of mathematics.
+            </p>
+            <div class="unit-footer">Coming soon</div>
+          </div>
         </div>
-        <div class="unit-card">
-          <span class="unit-tag">02 — Computer science</span>
-          <h3 class="unit-title">Binary trees always have n+1 leaves</h3>
-          <p class="unit-body">A fact that looks like a coincidence, proved by induction. Every tree-based algorithm in CS quietly relies on this relationship.</p>
-          <div class="unit-footer"><span class="unit-dot"></span>Interactive · Notation toggle</div>
-        </div>
-        <div class="unit-card dimmed">
-          <span class="unit-tag">03 — Calculus</span>
-          <h3 class="unit-title">The derivative at an instant</h3>
-          <p class="unit-body">Speed at a single moment in time. How 0 ÷ 0 becomes the most useful thing in mathematics.</p>
-          <div class="unit-footer">Coming soon</div>
-        </div>
-        <div class="unit-card dimmed">
-          <span class="unit-tag">04 — Number theory</span>
-          <h3 class="unit-title">Why there are infinitely many primes</h3>
-          <p class="unit-body">Euclid's proof — 2,300 years old and still one of the most beautiful arguments in all of mathematics.</p>
-          <div class="unit-footer">Coming soon</div>
+        <p class="units-note">
+          One new unit every week. Each one is a concept that used to scare me.
+        </p>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how fade-up">
+      <div class="container">
+        <h2 class="how-headline">How it works</h2>
+        <div class="principles-grid">
+          <div class="principle">
+            <span class="principle-num">01</span>
+            <h3 class="principle-title">
+              The hook — a question that feels urgent
+            </h3>
+            <p class="principle-body">
+              Not 'today we learn differentiation.' Something that makes you
+              genuinely need the answer before we show you the tools. Adults
+              learn differently to children. Context and stakes come first.
+            </p>
+          </div>
+          <div class="principle">
+            <span class="principle-num">02</span>
+            <h3 class="principle-title">
+              The obstacle — why the obvious approach fails
+            </h3>
+            <p class="principle-body">
+              Most teaching skips this entirely. That's the mistake. The moment
+              your naive approach breaks down is where the real understanding
+              lives. We slow down here on purpose.
+            </p>
+          </div>
+          <div class="principle">
+            <span class="principle-num">03</span>
+            <h3 class="principle-title">
+              The leap — the insight, made tangible
+            </h3>
+            <p class="principle-body">
+              Every unit has an interactive visual that lets you see the idea
+              rather than read about it. Sliders, animations, things you can
+              break. The notation toggle means you control when symbols enter
+              the picture.
+            </p>
+          </div>
+          <div class="principle">
+            <span class="principle-num">04</span>
+            <h3 class="principle-title">
+              The so what — where this idea lives in the world
+            </h3>
+            <p class="principle-body">
+              Every abstract idea earns its place by connecting to something
+              real. A physical system, an algorithm, a historical moment. If I
+              can't show you where it lives, I haven't earned the right to teach
+              it.
+            </p>
+          </div>
         </div>
       </div>
-      <p class="units-note">One new unit every week. Each one is a concept that used to scare me.</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="how fade-up">
-    <div class="container">
-      <h2 class="how-headline">How it works</h2>
-      <div class="principles-grid">
-        <div class="principle">
-          <span class="principle-num">01</span>
-          <h3 class="principle-title">The hook — a question that feels urgent</h3>
-          <p class="principle-body">Not 'today we learn differentiation.' Something that makes you genuinely need the answer before we show you the tools. Adults learn differently to children. Context and stakes come first.</p>
-        </div>
-        <div class="principle">
-          <span class="principle-num">02</span>
-          <h3 class="principle-title">The obstacle — why the obvious approach fails</h3>
-          <p class="principle-body">Most teaching skips this entirely. That's the mistake. The moment your naive approach breaks down is where the real understanding lives. We slow down here on purpose.</p>
-        </div>
-        <div class="principle">
-          <span class="principle-num">03</span>
-          <h3 class="principle-title">The leap — the insight, made tangible</h3>
-          <p class="principle-body">Every unit has an interactive visual that lets you see the idea rather than read about it. Sliders, animations, things you can break. The notation toggle means you control when symbols enter the picture.</p>
-        </div>
-        <div class="principle">
-          <span class="principle-num">04</span>
-          <h3 class="principle-title">The so what — where this idea lives in the world</h3>
-          <p class="principle-body">Every abstract idea earns its place by connecting to something real. A physical system, an algorithm, a historical moment. If I can't show you where it lives, I haven't earned the right to teach it.</p>
+    <!-- CONNECT -->
+    <section class="connect fade-up" id="connect">
+      <div class="container">
+        <div class="connect-card">
+          <h2 class="connect-title">Built to start conversations</h2>
+          <p class="connect-body">
+            I'm building this to connect with physicists, mathematicians, and
+            computer scientists who care about how ideas are communicated — and
+            anyone who has ever walked toward something that frightened them. If
+            something here resonated, I'd genuinely love to hear from you.
+          </p>
+          <div class="btn-row">
+            <a
+              href="https://www.linkedin.com/in/sophia-verhoeff-4b818b80/"
+              class="btn btn-primary">Find me on LinkedIn</a
+            >
+            <a href="mailto:hello@primeevils.com" class="btn btn-ghost"
+              >Send an email</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONNECT -->
-  <section class="connect fade-up" id="connect">
-    <div class="container">
-      <div class="connect-card">
-        <h2 class="connect-title">Built to start conversations</h2>
-        <p class="connect-body">I'm building this to connect with physicists, mathematicians, and computer scientists who care about how ideas are communicated — and anyone who has ever walked toward something that frightened them. If something here resonated, I'd genuinely love to hear from you.</p>
-        <div class="btn-row">
-          <a href="https://linkedin.com" class="btn btn-primary">Find me on LinkedIn</a>
-          <a href="mailto:hello@primeevils.com" class="btn btn-ghost">Send an email</a>
-        </div>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <a href="#" class="logo">
+          <span class="logo-sigma">∑</span>
+          <span class="logo-text">prime evils</span>
+        </a>
+        <ul class="footer-links">
+          <li><a href="#units">Units</a></li>
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#connect">Connect</a></li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <a href="#" class="logo">
-        <span class="logo-sigma">∑</span>
-        <span class="logo-text">prime evils</span>
-      </a>
-      <ul class="footer-links">
-        <li><a href="#units">Units</a></li>
-        <li><a href="#philosophy">Philosophy</a></li>
-        <li><a href="#connect">Connect</a></li>
-      </ul>
-    </div>
-  </footer>
+    <script>
+      const nav = document.getElementById("nav");
+      window.addEventListener(
+        "scroll",
+        () => {
+          nav.classList.toggle("scrolled", window.scrollY > 10);
+        },
+        { passive: true }
+      );
 
-  <script>
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 10);
-    }, { passive: true });
+      const toggle = document.getElementById("notation-toggle");
+      const plain = document.getElementById("demo-plain");
+      const notation = document.getElementById("demo-notation");
+      const lbl = document.getElementById("toggle-lbl");
 
-    const toggle = document.getElementById('notation-toggle');
-    const plain = document.getElementById('demo-plain');
-    const notation = document.getElementById('demo-notation');
-    const lbl = document.getElementById('toggle-lbl');
+      toggle.addEventListener("change", () => {
+        const on = toggle.checked;
+        plain.classList.toggle("hidden", on);
+        notation.classList.toggle("active", on);
+        lbl.textContent = on ? "Hide notation" : "Show notation";
+      });
 
-    toggle.addEventListener('change', () => {
-      const on = toggle.checked;
-      plain.classList.toggle('hidden', on);
-      notation.classList.toggle('active', on);
-      lbl.textContent = on ? 'Hide notation' : 'Show notation';
-    });
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("visible");
+                observer.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.08 }
+        );
 
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.classList.add('visible');
-            observer.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.08 });
-
-      document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-    } else {
-      document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
-    }
-  </script>
-
-</body>
+        document
+          .querySelectorAll(".fade-up")
+          .forEach((el) => observer.observe(el));
+      } else {
+        document
+          .querySelectorAll(".fade-up")
+          .forEach((el) => el.classList.add("visible"));
+      }
+    </script>
+  </body>
 </html>
