@@ -49,11 +49,11 @@ import "../styles/global.css";
           two fractions together) I chose to learn a subject that had made me
           feel small for most of my life.
           <br /><br />
-          Learning about mathematics, fundamentally changed my life. Not because it
-          came easily, but because it didn’t.
+          Learning about mathematics, fundamentally changed my life. <br />
+          Not because it came easily, but because it didn’t.
           <br /><br />
-          This is where I teach the ideas that used to terrify me, without pretending
-          they are obvious.
+          This is where I teach the ideas that used to terrify me, <br />
+          without pretending they are obvious.
         </p>
 
         <div class="demo-card">
@@ -71,7 +71,7 @@ import "../styles/global.css";
           </div>
           <p class="demo-plain" id="demo-plain">
             Assume your statement is true for some case k. Then prove it must be
-            true for case k + 1. If you can do this, it will holy for every
+            true for case k + 1.<br />If you can do this, it will holy for every
             following case.
           </p>
           <div class="demo-notation" id="demo-notation">
@@ -314,49 +314,6 @@ import "../styles/global.css";
       </div>
     </footer>
 
-    <script>
-      const nav = document.getElementById("nav");
-      window.addEventListener(
-        "scroll",
-        () => {
-          nav.classList.toggle("scrolled", window.scrollY > 10);
-        },
-        { passive: true }
-      );
-
-      const toggle = document.getElementById("notation-toggle");
-      const plain = document.getElementById("demo-plain");
-      const notation = document.getElementById("demo-notation");
-      const lbl = document.getElementById("toggle-lbl");
-
-      toggle.addEventListener("change", () => {
-        const on = toggle.checked;
-        plain.classList.toggle("hidden", on);
-        notation.classList.toggle("active", on);
-        lbl.textContent = on ? "Hide notation" : "Show notation";
-      });
-
-      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((e) => {
-              if (e.isIntersecting) {
-                e.target.classList.add("visible");
-                observer.unobserve(e.target);
-              }
-            });
-          },
-          { threshold: 0.08 }
-        );
-
-        document
-          .querySelectorAll(".fade-up")
-          .forEach((el) => observer.observe(el));
-      } else {
-        document
-          .querySelectorAll(".fade-up")
-          .forEach((el) => el.classList.add("visible"));
-      }
-    </script>
+    <script src="../scripts/main.js"></script>
   </body>
 </html>
