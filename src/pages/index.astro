@@ -19,7 +19,7 @@ import "../styles/global.css";
     <!-- NAV -->
     <nav id="nav">
       <div class="nav-inner">
-        <a href="#" class="logo">
+        <a href="/" class="logo">
           <span class="logo-sigma">∑</span>
           <span class="logo-text">prime evils</span>
         </a>
@@ -49,7 +49,8 @@ import "../styles/global.css";
             <span class="demo-label">Live demo — proof by induction</span>
             <div class="toggle-wrap">
               <span class="toggle-label" id="toggle-lbl">Show notation</span>
-              <label class="toggle" aria-label="Toggle notation">
+              <label class="toggle" for="notation-toggle">
+                <span class="sr-only">Toggle notation</span>
                 <input type="checkbox" id="notation-toggle" />
                 <span class="toggle-track"></span>
                 <span class="toggle-thumb"></span>
@@ -62,10 +63,9 @@ import "../styles/global.css";
             guaranteed — every case falls like a domino.
           </p>
           <div class="demo-notation" id="demo-notation">
-            Assume <span class="accent">P(k)</span> holds for some arbitrary k ≥ 1.
-            Show <span class="accent">P(k)</span> ⟹ <span class="accent"
-              >P(k+1)</span
-            >. By the principle of mathematical induction,
+            Assume <span class="accent">P(k)</span> holds for some arbitrary k ≥ 1.<br />
+            Show <span class="accent">P(k)</span> ⟹ <span class="accent">P(k+1)</span>.<br />
+            By the principle of mathematical induction,<br />
             <span class="accent">P(n)</span> holds for all n ∈ ℕ. □
           </div>
         </div>
@@ -287,7 +287,7 @@ import "../styles/global.css";
     <!-- FOOTER -->
     <footer>
       <div class="footer-inner">
-        <a href="#" class="logo">
+        <a href="/" class="logo">
           <span class="logo-sigma">∑</span>
           <span class="logo-text">prime evils</span>
         </a>
