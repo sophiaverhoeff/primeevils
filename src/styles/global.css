@@ -62,11 +62,12 @@ nav.scrolled {
   color: var(--text);
 }
 .logo-sigma {
-  font-size: 20px;
+  font-size: 14px;
   color: var(--accent);
   font-family: 'JetBrains Mono', monospace;
-  font-weight: 500;
+  font-weight: 900;
   line-height: 1;
+  margin-right: 10px;
 }
 .logo-text {
   font-family: 'JetBrains Mono', monospace;
